@@ -5,7 +5,7 @@ import wx
 class MyFrame(wx.Frame):    
     def __init__(self):
         super().__init__(parent=None, title='File Organizer')
-        self.SetIcon(wx.Icon('C:\\Users\\boggi\\FileOrganizer\\icons8-file-48.png', wx.BITMAP_TYPE_PNG))
+        self.SetIcon(wx.Icon('icons8-file-48.png', wx.BITMAP_TYPE_PNG))
         panel = wx.Panel(self)
         panel.SetBackgroundColour(wx.Colour("#FFFFFF")) 
         panel.Refresh() 
@@ -29,11 +29,11 @@ class MyFrame(wx.Frame):
 
         wx.CallLater(200, self.reset_button_color)
 
-        source_folder = r"C:\Users\boggi\Downloads" 
+        source_folder = r"YOUR DOWNLOADS FOLDER PATH HERE" 
         destination_folders = {
-            'documents': r"C:\Users\boggi\OneDrive\Documents",
-            'pictures': r"C:\Users\boggi\OneDrive\Pictures",
-            'others': r"C:\Users\boggi\Downloads" 
+            'documents': r"INSERT YOUR DUCIMENTS PATH HERE: Documents",
+            'pictures': r"INSERT YOUR PICTURES PATH HERE: Pictures",
+            'others': r"INSERT YOUR DOWNLOAD PATH HERE: Downloads" 
         }
         organizer = FileOrganizer(source_folder, destination_folders)
         organizer.organize_files()
